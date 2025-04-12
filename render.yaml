@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: pastebin-django
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn pastebin.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: pastebin.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
