@@ -69,6 +69,7 @@
       border-radius: 0.5rem;
       padding: 0.75rem;
       transition: 0.3s ease;
+      margin-top: 1rem;
     }
 
     #create:hover {
@@ -84,7 +85,6 @@
   <div class="container">
     <form method="post">
       {% csrf_token %}
-      <button class="btn" id="create" type="submit">✨ Create Paste</button>
       <div class="row">
         <div class="col-md-4">
           <input type="text" class="form-control" name="title" placeholder="Title (optional)">
@@ -97,6 +97,7 @@
         </div>
       </div>
       <textarea class="form-control" name="text" placeholder="Add your paste..." required rows="10"></textarea>
+      <button class="btn" id="create" type="submit">✨ Create Paste</button>
     </form>
   </div>
 </body>
